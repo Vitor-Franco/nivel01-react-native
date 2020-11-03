@@ -14,6 +14,6 @@ Para que o desafio seja dado como **finalizado**, temos alguns testes presentes.
 
 ### Conclusão
 
-Desafio interessante para fixar conceitos básicos, e práticar o que é mostrado no curso. Além de por em prática, alguns dos conceitos mais relevantes do React Native, como a imutabilidade.
+Desafio interessante para fixar conceitos básicos, e práticar o que é mostrado no curso. Além de por em prática, alguns dos conceitos mais relevantes do React, como a imutabilidade e estado.
 
 [nodejs]: https://github.com/Vitor-Franco/nivel01-nodejs
