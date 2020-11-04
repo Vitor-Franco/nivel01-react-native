@@ -9,7 +9,7 @@ import {
   StatusBar,
   StyleSheet,
   TouchableOpacity,
-  ScrollView,
+  FlatList,
 } from 'react-native';
 
 export default function App() {
@@ -38,8 +38,10 @@ export default function App() {
     <>
       <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
       <SafeAreaView style={styles.container}>
-        <ScrollView>
-          {repositories.map((repository) => (
+        <FlatList
+          data={repositories}
+          keyExtractor={(repository) => repository.id}
+          renderItem={({ item: repository }) => (
             <View key={repository.id} style={styles.repositoryContainer}>
               <Text style={styles.repository}>{repository.title}</Text>
 
@@ -68,13 +70,13 @@ export default function App() {
                 onPress={() => handleLikeRepository(repository.id)}
                 // Remember to replace "1" below with repository ID: {`like-button-${repository.id}`}
                 testID={`like-button-${repository.id}`}
-                activeOpacity={0.8}
+                activeOpacity={0.9}
               >
                 <Text style={styles.buttonText}>Curtir</Text>
               </TouchableOpacity>
             </View>
-          ))}
-        </ScrollView>
+          )}
+        />
       </SafeAreaView>
     </>
   );
